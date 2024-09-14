@@ -18,7 +18,7 @@ def get_nested_proj_list(start=""):
   return result
 
 def get_base_path():
-  return "C:/Local/app_data/sublime_notes.data"
+  return "C:/@local/data.center/sublime_notes.data"
 
 def get_ws_path_from_name(name):
   parts = name.split('>')
