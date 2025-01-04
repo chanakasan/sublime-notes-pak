@@ -11,14 +11,17 @@ def get_proj_list():
 def get_nested_proj_list(start=""):    
   suffix = ".sublime-workspace"
   result = get_nested_files_list(get_base_path())
-  # filter
+  # filter by extension
   result = filter(lambda x: x.endswith(suffix), result)
-  # map
+  # remove extension
   result = map(lambda x: x.split(suffix, 1)[0], result)
+  # Push "new#" to the result list
+  result = list(result)  # Convert map object to list
+  result.append("new##")
   return result
 
 def get_base_path():
-  return "C:/@local/data.center/sublime_notes.data"
+  return "H:/data-center/sublime-notes.data"
 
 def get_ws_path_from_name(name):
   parts = name.split('>')
