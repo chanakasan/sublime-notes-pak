@@ -1,2 +1,2 @@
-from .lib.command import NxOpenNotesCommand
-from .lib.input_handler import NxProjInputHandler
+from .app.command import NxOpenNotesCommand
+from .app.input_handler import NxProjInputHandler
