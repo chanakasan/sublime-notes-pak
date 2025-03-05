@@ -38,9 +38,7 @@ def copy_file_safely(src_path, dest_path):
 def open_sublime_workspace(window, ws_file):
   if not os.path.isfile(ws_file):
     raise ValueError('Invalid file: ' + ws_file)
-  # current_workspace_path(window)
   window.run_command('close_workspace')
   window.run_command('open_project_or_workspace', {
       'file': ws_file,
   })
-
