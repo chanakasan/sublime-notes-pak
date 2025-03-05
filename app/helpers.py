@@ -1,6 +1,7 @@
-from .config import notes_base_path
-from ..lib.utils.files import *
-from ..lib.sublime.debug import *
+from app.utils import current_workspace_path
+from app.config import notes_base_path
+from lib.utils.files import *
+from lib.sublime.debug import *
 import shutil
 
 def get_proj_list():
@@ -34,20 +35,12 @@ def copy_file_safely(src_path, dest_path):
   if not os.path.isfile(dest_path):
     shutil.copyfile(src_path, dest_path)
 
-def create_new_notebook(name):
-  old_name = 'new space ##.sublime-workspace'
-  new_name = name + '.sublime-workspace'
-  src_path = notes_base_path() + "/root/" + old_name
-  new_path = notes_base_path() + "/notepads/" + new_name
-  copy_file_safely(src_path, new_path)
-  return new_path
-
 def open_sublime_workspace(window, ws_file):
   if not os.path.isfile(ws_file):
     raise ValueError('Invalid file: ' + ws_file)
+  # current_workspace_path(window)
+  window.run_command('close_workspace')
   window.run_command('open_project_or_workspace', {
       'file': ws_file,
   })
 
-def show_input_panel(window, on_done):
-  window.show_input_panel("New Space Name:", "", on_done, None, None)
