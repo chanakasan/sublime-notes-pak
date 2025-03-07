@@ -1,2 +1,2 @@
 def notes_base_path():
-  return "C:\symlinks\sublime-notes"
+  return "D:\Temp\sublime-brain-dup-copy"

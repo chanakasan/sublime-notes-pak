@@ -6,6 +6,5 @@ def append_sys_path_with(file_path):
 
 append_sys_path_with(__file__)
 
-
-from app.command import NxOpenNotesCommand
-from app.input_handler import NxProjInputHandler
+from app.modules.open_notebook.command import NxOpenNotebookCommand
+from app.modules.reveal_notebook.command import NxRevealNotebookCommand

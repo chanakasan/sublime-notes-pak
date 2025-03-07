@@ -2,11 +2,11 @@ import sublime, sublime_plugin
 from .helpers import *
 from .input_handler import NxProjInputHandler
 
-class NxOpenNotesCommand(sublime_plugin.WindowCommand):
+class NxOpenNotebookCommand(sublime_plugin.WindowCommand):
     def run(self, item_name):
         print('')
         print('---' * 10)
-        print('NxOpenNotesCommand')
+        print('NxOpenNotebookCommand')
         print('item_name = ', item_name)
         if (item_name == False):
             print("aborting...")

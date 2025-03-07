@@ -1,6 +1,6 @@
 [
   { 
     "keys": ["ctrl+o"],
-    "command": "nx_open_notes"
+    "command": "nx_open_notebook"
   },
 ]
