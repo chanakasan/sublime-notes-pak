@@ -6,7 +6,7 @@ class NxOpenNotesCommand(sublime_plugin.WindowCommand):
     def run(self, item_name):
         print('')
         print('---' * 10)
-        print('NxOpenNotesCommandww')
+        print('NxOpenNotesCommand')
         print('item_name = ', item_name)
         if (item_name == False):
             print("aborting...")
