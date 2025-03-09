@@ -1,5 +1,5 @@
 {
     "python.analysis.extraPaths": [
-        "C:/Apps/SublimeNotes/Data/Packages",
+        "D:/Apps/SublimeTextLab/Lib/python38",
     ]
 }
